@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1638147335485_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1638147335498_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1638147875458_3" label="cloudsim-package" name="cloudsim-package">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudsim-cloudsim-4.0" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/modules" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudsim" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudsim-examples" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/documentation" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/distribution" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1638534990355_4" label="cloudsimex" name="cloudsimex">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CloudSimEx-master" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudsimex-examples" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudsimex-web" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudsimex-core" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudsimex-experiments" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudsimex-mapreduce" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cloudsimex-geolocation" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1638147336919_2" label="Window Working Set" name="Aggregate for window 1638147336919"/>
+</workingSetManager>
