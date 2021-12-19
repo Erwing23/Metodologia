@@ -1,4 +1,4 @@
-package org.cloudbus.cloudsim.examples.power.planetlab;
+package ec.edu.espol.metodologia.proyecto.simulacion.example;
 
 import java.io.IOException;
 import java.util.Calendar;
@@ -9,8 +9,11 @@ import org.cloudbus.cloudsim.DatacenterBroker;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Vm;
 import org.cloudbus.cloudsim.core.CloudSim;
+import org.cloudbus.cloudsim.ex.DatacenterBrokerEX;
 import org.cloudbus.cloudsim.examples.power.Constants;
 import org.cloudbus.cloudsim.examples.power.Helper;
+import org.cloudbus.cloudsim.examples.power.planetlab.PlanetLabConstants;
+import org.cloudbus.cloudsim.examples.power.planetlab.PlanetLabHelper;
 import org.cloudbus.cloudsim.power.PowerDatacenterNonPowerAware;
 import org.cloudbus.cloudsim.power.PowerHost;
 import org.cloudbus.cloudsim.power.PowerVmAllocationPolicySimple;
@@ -44,7 +47,7 @@ public class NonPowerAware {
 	 */
 	public static void main(String[] args) throws IOException {
 		String experimentName = "planetlab_npa";
-		String outputFolder = "output2";
+		String outputFolder = "output3";
 		String inputFolder = NonPowerAware.class.getClassLoader().getResource("workload/planetlab/20110303")
 				.getPath();
 
@@ -54,8 +57,10 @@ public class NonPowerAware {
 		try {
 			CloudSim.init(1, Calendar.getInstance(), false);
 
-			DatacenterBroker broker = Helper.createBroker();
-			int brokerId = broker.getId();
+			//DatacenterBroker broker = Helper.createBroker();
+			 DatacenterBrokerEX broker = new DatacenterBrokerEX("Broker", 84000);
+
+                        int brokerId = broker.getId();
 
 			List<Cloudlet> cloudletList = PlanetLabHelper.createCloudletListPlanetLab(brokerId, inputFolder);
 			List<Vm> vmList = Helper.createVmList(brokerId, cloudletList.size());
@@ -69,8 +74,10 @@ public class NonPowerAware {
 
 			datacenter.setDisableMigrations(true);
 
-			broker.submitVmList(vmList);
-			broker.submitCloudletList(cloudletList);
+			//broker.submitVmList(vmList);
+                        
+			broker.createVmsAfter(vmList, 2000);
+                        broker.submitCloudletList(cloudletList);
 
 			CloudSim.terminateSimulation(Constants.SIMULATION_LIMIT);
 			double lastClock = CloudSim.startSimulation();
